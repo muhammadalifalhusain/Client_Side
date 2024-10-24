@@ -8,7 +8,7 @@ const FormSignUp = () => {
         <LabeledInput
           label="Name"
           type="text"
-          placeholder="Husain Babi"
+          placeholder="YourName"
           name="name"
         />
       </div>
