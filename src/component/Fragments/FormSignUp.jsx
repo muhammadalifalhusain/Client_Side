@@ -1,9 +1,20 @@
+import { useNavigate } from 'react-router-dom';
 import Button from "../elements/button";
 import LabeledInput from "../elements/LabeledInput";
 
 const FormSignUp = () => {
+  const navigate = useNavigate(); // Inisialisasi useNavigate
+
+  const handleSubmit = (e) => {
+    e.preventDefault(); // Mencegah perilaku default form
+    // Di sini, Anda dapat menambahkan logika untuk mendaftar jika diperlukan
+
+    // Mengarahkan ke halaman balance setelah pendaftaran berhasil
+    navigate('/balance');
+  };
+
   return (
-    <form action="">
+    <form onSubmit={handleSubmit}>
       <div className="mb-6">
         <LabeledInput
           label="Name"

@@ -1,8 +1,20 @@
 
 import LabeledInput from "../elements/LabeledInput";
 import Button from "../elements/button";
+import { useNavigate } from 'react-router-dom';
 
 const LoginForm = () => {
+  
+  const navigate = useNavigate(); // Inisialisasi useNavigate
+
+  const handleSubmit = (e) => {
+    e.preventDefault(); // Mencegah perilaku default form
+    // Di sini, Anda dapat menambahkan logika untuk mendaftar jika diperlukan
+
+    // Mengarahkan ke halaman balance setelah pendaftaran berhasil
+    navigate('/balance');
+  };
+
   return (
     <form action="">
       <div className="mb-6">
