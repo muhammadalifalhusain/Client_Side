@@ -16,7 +16,7 @@ const LoginForm = () => {
   };
 
   return (
-    <form action="">
+    <form onSubmit={handleSubmit}>
       <div className="mb-6">
         <LabeledInput
           label="Email Address"
