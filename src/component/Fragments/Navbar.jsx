@@ -2,9 +2,14 @@ import { Link } from "react-router-dom";
 import { Icon } from "../Icon/Index";
 import Logo from "../elements/logo";
 import { NavLink } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 
 const Navbar = () => {
+  const navigate = useNavigate();
+  const handleLogout = () =>{
+    navigate("/")
+  }
   const menus = [
     {
       id: "overview",
@@ -75,14 +80,14 @@ const Navbar = () => {
 
       </div>
       <div className="sticky bottom-12">
-	      <Link to="/logout">
-	        <div className="flex bg-special-bg3 px-4 py-3 rounded-md hover:text-white">
+	      
+	        <div onClick={handleLogout} className="flex bg-special-bg3 px-4 py-3 rounded-md hover:text-white cursor-pointer">
 	          <div className="mx-auto sm:mx-0">
               <Icon.LogOut/>
             </div>
 	          <div className="ms-3 hidden sm:block">Logout</div>
 	        </div>
-        </Link>
+        
         <div className="border-b my-10 border-b-special-bg"></div>
         <div className="flex justify-between">
           <div className="mx-auto sm:mx-0 self-center">
