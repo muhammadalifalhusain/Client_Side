@@ -252,6 +252,18 @@ const IconWrapper = ({ children }) => (
     </IconWrapper>
   );
 
+  const PanahIcon = () => (
+    <IconWrapper>
+      <path
+        d="M6 12L10 8L6 4"
+        stroke="#696969"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />    
+    </IconWrapper>
+  );
+
   
 
     
@@ -263,6 +275,7 @@ const IconWrapper = ({ children }) => (
 
   
   export const Icon = {
+    Panah: PanahIcon,
     Overview: OverviewIcon,
     Balance: BalanceIcon,
     Transaction: TransactionIcon,
