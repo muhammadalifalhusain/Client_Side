@@ -1,11 +1,14 @@
 import React from "react";
 
-const Logo = () => {
+const Logo = (props) => {
+  const { variant = "text-primary text-4xl" } = props;
+
   return (
-    <div className="flex justify-center font-poppins tracking-wide text-4xl">
-      <span className="font-bold text-[#299D91]">FINE</span >
-      <span className=" text-[#299D91]">bank</span >
-      <span className="font-bold text-[#299D91]">.IO</span>
+    <div
+      className={`flex justify-center font-poppins tracking-wide ${variant}`}
+    >
+      <span className="font-bold ">FINE</span>bank
+      <span className="font-bold">.IO</span>
     </div>
   );
 };
