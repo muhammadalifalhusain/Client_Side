@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+
 import { Icon } from "../Icon/Index";
 import Logo from "../elements/logo";
 import { NavLink } from "react-router-dom";
@@ -7,6 +7,7 @@ import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const navigate = useNavigate();
+
   const handleLogout = () =>{
     navigate("/")
   }
@@ -43,7 +44,7 @@ const Navbar = () => {
     },
     {
       id: "goal",
-      link: "/goal",
+      link: "/goals",
       icon: <Icon.Goal />,
       label: "Goal",
     },
